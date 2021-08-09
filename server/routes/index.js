@@ -13,7 +13,7 @@ router.get('/',(req,res) => {
 })
 
 router.use('/driver_id',AktifasiRoutes)
-router.use('/search',AssignRoutes)
+router.use('/',AssignRoutes)
 router.use('/driver_id',DriverRoutes)
 router.use('/driver_id',DeaktifasiRoutes)
 router.use('/driver_id',DeassignRoutes)
