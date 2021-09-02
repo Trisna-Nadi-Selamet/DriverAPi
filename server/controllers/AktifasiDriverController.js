@@ -1,10 +1,10 @@
-const{Driver}=require('../models')
+const{driver}=require('../models')
 
 class AktifasiDriverController{
     static async aktifasiDrivers(req,res){
         let id =  +req.params.id
         try{
-        let aktifasi = await Driver.findOne({ 
+        let aktifasi = await driver.findOne({ 
           where:{
               id
           }
@@ -19,7 +19,7 @@ class AktifasiDriverController{
        const id = +req.params.id
        let { lat, lon, status } = req.body;      
        try {
-        let result = Driver.update({
+        let result = driver.update({
             lat,
             lon,
             status,

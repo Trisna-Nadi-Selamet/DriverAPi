@@ -1,11 +1,11 @@
-const{Driver}=require('../models')
+const{driver}=require('../models')
 
 class DeaktifasiDriverController{
     static async adddeaktifasiDrivers(req,res){
         const id = +req.params.id
         let { lat, lon, status } = req.body;      
         try {
-         let result = Driver.update({
+         let result = driver.update({
              lat,
              lon,
              status,

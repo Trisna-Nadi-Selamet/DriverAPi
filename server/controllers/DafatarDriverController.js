@@ -1,9 +1,9 @@
-const{Driver}=require('../models')
+const{driver}=require('../models')
 
 class DafatarDriverController{
     static async listDrivers(req,res){
         try{
-        let drivers = await Driver.findAll({
+        let drivers = await driver.findAll({
           
           order:[
                 ['id','ASC']

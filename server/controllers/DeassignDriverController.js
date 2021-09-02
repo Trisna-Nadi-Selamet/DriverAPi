@@ -1,11 +1,11 @@
-const{Driver}=require('../models')
+const{driver}=require('../models')
 
 class DeassignDriverController{
     static async adddeassignDrivers(req,res){
         const id = +req.params.id
         let { lat, lon, status } = req.body;      
         try {
-         let result = Driver.update({
+         let result = driver.update({
              lat,
              lon,
              status,
